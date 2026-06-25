@@ -1,12 +1,11 @@
-// https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   compatibilityDate: "2025-07-15",
   devtools: { enabled: true },
 
   runtimeConfig: {
     public: {
-      apiBase: process.env.NUXT_PUBLIC_API_URL || "http://localhost:5189",
-       appVersion: process.env.APP_VERSION || "0.0.0",
+      // หากไม่มีการตั้งค่าใน Vercel ให้แสดง Error หรือใช้ URL หลัก
+      apiBase: process.env.API_BASE
     },
   },
 
